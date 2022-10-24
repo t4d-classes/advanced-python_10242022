@@ -2,6 +2,7 @@
 result = 0.0
 history = []
 
+
 while True:
 
     command = input("Enter a command:")
