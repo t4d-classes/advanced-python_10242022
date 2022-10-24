@@ -1,5 +1,10 @@
 # Exercise 2
 
+```python
+if command in ['add', 'subtract', 'multliply']:
+    ...
+```
+
 ## Part A
 
 **Requirement 1.** Add a new command to the calculator named "history". When the user runs the "history" command display a history of the commands in the console.
