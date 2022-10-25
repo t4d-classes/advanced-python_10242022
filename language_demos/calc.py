@@ -1,7 +1,3 @@
-
-from webbrowser import get
-
-
 history = []
 
 math_ops = {
@@ -37,39 +33,35 @@ def append_history_entry(history, id, opName, opValue):
     })
 
 def remove_history_entry(history, entry_id):
-    # global history
-    # history = [ entry for entry in history if entry["id"] != entry_id ]
-
     for entry in history:
         if entry["id"] == entry_id:
             history.remove(entry)
             break
 
-def calc_result(history):
+def calc_result(history, math_ops):
     result = 0
     for entry in history:
         result = math_ops[entry["opName"]](result, entry["opValue"])
     return result
 
 
-def command_calc(op_name):
+def command_calc(history, op_name, math_ops):
     operand = get_operand()
     append_history_entry(
         history,
         get_next_id(history),
         op_name,
         operand)
-    print(calc_result(history))
+    print(calc_result(history, math_ops))
 
-def command_remove_history_entry():
+def command_remove_history_entry(history):
     history_entry_id = get_history_entry_id()
     remove_history_entry(history, history_entry_id)
 
 def command_clear_history():
-    global history
-    history = []
+    return []
 
-def command_show_history():
+def command_show_history(history):
     for entry in history:
         print(entry)
 
@@ -82,13 +74,13 @@ while True:
     command = get_command()
 
     if command in math_ops:
-        command_calc(command)
+        command_calc(history, command, math_ops)
     elif command == "remove":
-        command_remove_history_entry()
+        command_remove_history_entry(history)
     elif command == "clear":
-        command_clear_history()
+        history = command_clear_history()
     elif command == "history":
-        command_show_history()
+        command_show_history(history)
     elif command == "exit":
         break
     else:
