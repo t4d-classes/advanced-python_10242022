@@ -1,5 +1,8 @@
 
+# Class Docs: https://docs.python.org/3/tutorial/classes.html
+# 
 
+# https://docs.python.org/3/tutorial/classes.html#class-objects
 class Person:
 
     def __init__(self, first_name, last_name):
@@ -7,7 +10,7 @@ class Person:
         self.first_name = first_name
         self.last_name = last_name
 
-    # instance method
+    # instance method - https://docs.python.org/3/tutorial/classes.html#method-objects
     def full_name(self):
         # return f"{self.first_name} {self.last_name}"
         return self.first_name + " " + self.last_name
@@ -26,7 +29,7 @@ class Student(Person):
     def info(self, extra_info):
         return f"{self.student_id} {self.last_name}, {self.first_name} {extra_info}"
 
-# person is an instance variable
+# person is an instance variable - https://docs.python.org/3/tutorial/classes.html#instance-objects
 person = Person("Bob", "Smith")
 print(person.full_name())
 print(person.record_label())
