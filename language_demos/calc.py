@@ -52,12 +52,12 @@ def calc_result(history):
     return result
 
 
-def command_calc():
+def command_calc(op_name):
     operand = get_operand()
     append_history_entry(
         history,
         get_next_id(history),
-        "add",
+        op_name,
         operand)
     print(calc_result(history))
 
@@ -82,7 +82,7 @@ while True:
     command = get_command()
 
     if command in math_ops:
-        command_calc()
+        command_calc(command)
     elif command == "remove":
         command_remove_history_entry()
     elif command == "clear":
