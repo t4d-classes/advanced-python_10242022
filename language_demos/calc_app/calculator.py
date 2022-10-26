@@ -38,10 +38,10 @@ class Calculator:
     def command_invalid(self):           
         output_invalid_command()
 
-    def command_save(self):
+    def command_save_history(self):
         self.__history_list.save()
 
-    def command_load(self):
+    def command_load_history(self):
         self.__history_list.load()
 
     def calc_result(self):

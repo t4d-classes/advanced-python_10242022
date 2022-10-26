@@ -19,6 +19,10 @@ def app():
             calculator.command_remove_history_entry()
         elif command == "clear":
             calculator.command_clear_history()
+        elif command == "load":
+            calculator.command_load_history()
+        elif command == "save":
+            calculator.command_save_history()
         elif command == "history":
             calculator.command_show_history()
         elif command == "exit":
