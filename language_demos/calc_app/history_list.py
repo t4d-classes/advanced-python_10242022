@@ -32,6 +32,9 @@ class HistoryList:
                 self.__history.remove(entry)
                 break
 
+    def replace_history(self, new_history_entry_list):
+        self.__history = new_history_entry_list
+
     def clear(self):
         self.__history = []
 

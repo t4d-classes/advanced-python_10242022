@@ -1,3 +1,5 @@
+
+
 from calc_app.user_input import (
     get_operand, get_history_entry_id
 )
@@ -35,6 +37,12 @@ class Calculator:
 
     def command_invalid(self):           
         output_invalid_command()
+
+    def command_save(self):
+        ...
+
+    def command_load(self):
+        ...
 
     def calc_result(self):
         result = 0
