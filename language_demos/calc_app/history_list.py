@@ -11,9 +11,16 @@ class HistoryEntry:
 
 class HistoryList:
 
-    def __init__(self):
+    def __init__(self, history_storage):
         self.__history = []
         self.__current_iter = None
+        self.__history_storage = history_storage
+
+    def save(self):
+        self.__history_storage.save(self)
+
+    def load(self):
+        self.__history_storage.load(self)
 
     def __get_next_id(self):
         next_id = 1
@@ -31,6 +38,9 @@ class HistoryList:
             if entry.id == entry_id:
                 self.__history.remove(entry)
                 break
+
+    def replace_history(self, new_history_entry_list):
+        self.__history = new_history_entry_list
 
     def clear(self):
         self.__history = []
