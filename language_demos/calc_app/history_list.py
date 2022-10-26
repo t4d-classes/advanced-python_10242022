@@ -11,9 +11,16 @@ class HistoryEntry:
 
 class HistoryList:
 
-    def __init__(self):
+    def __init__(self, history_storage):
         self.__history = []
         self.__current_iter = None
+        self.__history_storage = history_storage
+
+    def save(self):
+        self.__history_storage.save(self)
+
+    def load(self):
+        self.__history_storage.load(self)
 
     def __get_next_id(self):
         next_id = 1

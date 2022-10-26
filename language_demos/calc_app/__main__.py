@@ -1,10 +1,12 @@
 from calc_app.user_input import get_command
 from calc_app.history_list import HistoryList
 from calc_app.calculator import Calculator
+from calc_app.history_file_storage import HistoryFileStorage
 
 def app():
 
-    history_list = HistoryList()
+    history_storage = HistoryFileStorage()
+    history_list = HistoryList(history_storage)
     calculator = Calculator(history_list)
 
     while True:
