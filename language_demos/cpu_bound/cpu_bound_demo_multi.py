@@ -37,7 +37,7 @@ if __name__ == '__main__':
 
         processes: list[multiprocessing.Process] = []
 
-        for _ in range(16):
+        for _ in range(8):
             a_process = multiprocessing.Process(
                 target=calc_fib_total, args=(results,))
             a_process.start()

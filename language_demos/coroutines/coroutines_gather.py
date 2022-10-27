@@ -1,4 +1,5 @@
 import asyncio
+import aiofiles
 import time
 from random import randint
 
@@ -18,6 +19,24 @@ async def get_data(task_num: int) -> None:
   await asyncio.sleep(delay())
   print(f"finished get data {task_num}", counter)
   counter -= 1
+
+# code related to a question about processing lots of files...
+# async def load_and_process_array_file(file_name):
+#   async with aiofiles.open(file_name, encoding="UTF-8") as color_file:
+#     file_contents = await color_file.read_file()
+#     # more code to process file contents
+#     cleaned_up_file_contents = file_contents
+#     return cleaned_up_file_contents
+
+
+# async def load_array_files():
+
+#   file_nums = range(52)
+
+#   file_results = await asyncio.gather(*[load_and_process_array_file(f"{file_num}.txt") for file_num in file_nums ])
+
+#   # this is what you would operate on all of the together
+
 
 
 async def main() -> None:

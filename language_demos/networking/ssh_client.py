@@ -21,7 +21,7 @@ for line in stdout:
 with client.open_sftp() as sftp_client:
     sftp_client.chdir("/home/ericwgreene")
     print(sftp_client.getcwd())
-    sftp_client.put('test.txt', "/home/ericwgreene/text.txt")
+    sftp_client.put('test.txt', "/home/ericwgreene/test.txt")
 
 # get a directory listing to see if the file was uploaded
 stdin, stdout, stderr = client.exec_command('ls -al')

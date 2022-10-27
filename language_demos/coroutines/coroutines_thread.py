@@ -28,17 +28,17 @@ async def main() -> None:
   # get_data_sync(2)
   # get_data_sync(3)
 
-  # await asyncio.gather(
-  #   asyncio.to_thread(get_data_sync, 1),
-  #   asyncio.to_thread(get_data_sync, 2),
-  #   asyncio.to_thread(get_data_sync, 3)
-  # )
-
   await asyncio.gather(
-    get_data_async(1),
-    get_data_async(2),
-    get_data_async(3),
+    asyncio.to_thread(get_data_sync, 1),
+    asyncio.to_thread(get_data_sync, 2),
+    asyncio.to_thread(get_data_sync, 3)
   )
+
+  # await asyncio.gather(
+  #   get_data_async(1),
+  #   get_data_async(2),
+  #   get_data_async(3),
+  # )
 
   print("all done")
 

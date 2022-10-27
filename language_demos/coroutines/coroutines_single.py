@@ -22,7 +22,7 @@ async def main() -> None:
 if __name__ == "__main__":
 
   start = time.perf_counter()
-  asyncio.run(main())
+  asyncio.run(main()) # create an event loop, you can have one event loop per thread
   end = time.perf_counter()
 
   file_name = __file__.split("/", maxsplit=-1)[-1]
