@@ -1,5 +1,7 @@
 from abc import ABC, abstractmethod
 
+# Abstract Base Classes - https://docs.python.org/3/library/abc.html
+
 # example of employing static typing in a Python
 class Vehicle(ABC):
     @abstractmethod

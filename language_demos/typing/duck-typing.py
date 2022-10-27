@@ -1,3 +1,6 @@
+
+# Duck-Typing: https://en.wikipedia.org/wiki/Duck_typing
+
 # this is how Calculator and HistoryList are working
 class Car:
     def drive(self):
