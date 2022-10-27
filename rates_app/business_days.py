@@ -12,5 +12,8 @@ def business_days(start_date, end_date):
             yield the_date
 
 
-for business_day in business_days(date(2022, 6, 3), date(2022, 7, 5)):
-    print(business_day)
+print(f"business days: {__name__}")
+
+if __name__ == "__main__":
+    for business_day in business_days(date(2022, 6, 3), date(2022, 7, 5)):
+        print(business_day)
