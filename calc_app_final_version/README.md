@@ -1,6 +1,6 @@
 # Calc App
 
-1. Change into the `calc_app` folder.
+1. Change into the outer `calc_app` folder.
 
 ```bash
 cd calc_app

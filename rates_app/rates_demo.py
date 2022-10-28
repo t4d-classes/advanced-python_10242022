@@ -11,7 +11,7 @@ import asyncio
 import requests
 
 start_date = date(2020, 8, 1)
-end_date = date(2020, 8, 20)
+end_date = date(2021, 3, 20) # date(2020, 8, 20)
 base_currency = 'INR'
 currency_symbols = ['USD', 'CAD', 'GBP']
 

@@ -4,7 +4,7 @@
 1. Create and activate a new Conda environment.
 
 ```
-conda create -n jupyter
+conda create -n jupyter python=3.9.12
 conda activate jupyter
 ```
 
@@ -12,7 +12,7 @@ conda activate jupyter
 
 ```bash
 python -m pip install jupyterlab jupyterlab-lsp python-lsp-server
-python -m pip install numpy matplotlib pandas scipy
+python -m pip install numpy matplotlib pandas scipy imageio
 ```
 
 3. Install a new kernel using the new Conda environment.
